@@ -18,7 +18,7 @@ MAX_WALKING_DIST = 3.0
 BASE_SEED = 42
 
 # Sweep 1
-ALPHAS = [0.05, 0.1, 0.2]
+ALPHAS = [0.4, 0.6, 0.8]
 GAMMAS = [0.8, 0.9, 0.95]
 Q_ITERATIONS = [1, 5, 10]
 

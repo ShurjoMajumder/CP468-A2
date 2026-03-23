@@ -14,7 +14,7 @@ if __name__ == '__main__':
         "start": 0,
         "dest": 15,
         "max_walking_dist": 3.0,
-        "alpha": 0.2,
+        "alpha": 0.6,
         "gamma": 0.8,
         "epsilon": 0.6,
         "epsilon_decay": 0.99,
