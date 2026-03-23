@@ -18,9 +18,9 @@ MAX_WALKING_DIST = 3.0
 BASE_SEED = 42
 
 # Sweep 1
-ALPHAS = [0.4, 0.6, 0.8]
+ALPHAS = [0.4, 0.5, 0.6, 0.7, 0.8]
 GAMMAS = [0.8, 0.9, 0.95]
-Q_ITERATIONS = [1, 5, 10]
+Q_ITERATIONS = [50, 55, 60, 65, 70]
 
 
 FIXED_EPSILON = 0.9
@@ -164,9 +164,9 @@ if __name__ == "__main__":
     ensure_output_dir()
 
     hyper_rows = run_hyperparameter_sweep()
-    epsilon_rows = run_epsilon_sweep()
+    # epsilon_rows = run_epsilon_sweep()
 
     write_csv(os.path.join(OUTPUT_DIR, "grid_search_alpha_gamma_q_iterations.csv"), hyper_rows)
-    write_csv(os.path.join(OUTPUT_DIR, "grid_search_epsilon_params.csv"), epsilon_rows)
+    # write_csv(os.path.join(OUTPUT_DIR, "grid_search_epsilon_params.csv"), epsilon_rows)
 
     print(f"[{datetime.datetime.now().astimezone()}] Done. CSV files written to '{OUTPUT_DIR}/'")
